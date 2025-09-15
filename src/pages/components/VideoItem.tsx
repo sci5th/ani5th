@@ -16,7 +16,7 @@ const VideoItem: React.FC<VideoItemProps> = ({ video, onSelect }) => {
 
   return (
     <div
-      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 border-2 border-slate-800 hover:border-slate-500 max-w-xs"
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 border-2 border-slate-800 hover:border-slate-500 max-w-72"
       onClick={onSelect}
     >
       <div
@@ -37,6 +37,9 @@ const VideoItem: React.FC<VideoItemProps> = ({ video, onSelect }) => {
           src={video.src}
           muted
           playsInline
+          // add to avoid 'black color box' issue on some browsers
+          autoPlay
+          loop
         />
       </div>
       {/* <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
