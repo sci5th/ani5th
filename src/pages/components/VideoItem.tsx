@@ -38,8 +38,8 @@ const VideoItem: React.FC<VideoItemProps> = ({ video, onSelect }) => {
           muted
           playsInline
           // add to avoid 'black color box' issue on some browsers
-          autoPlay
-          loop
+          // autoPlay
+          // loop
         />
       </div>
       {/* <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
